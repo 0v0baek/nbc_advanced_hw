@@ -45,8 +45,7 @@ def pascal(n):
 def pascal(n):
     if n == 1:
         return [1]
-    else:
-        return [1] + [pascal(n-1)[i-2] + pascal(n-1)[i-1] for i in range(2,n)] + [1]
+    return [1] + [pascal(n-1)[i-2] + pascal(n-1)[i-1] for i in range(2,n)] + [1]
 
 # 딕셔너리에 파스칼 값을 저장해서 매번 연산하지 않아도 되게 속도를 줄여줌
 def pascal(n):
